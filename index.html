@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Actividad Furmulario Email</title>
+<link rel="stylesheet" href="Estilo.css"/>
+<script> 
+function ValidarN(e) 
+	{ 
+		tecla = (document.all) ? e.keyCode : e.which; 
+		patron = /\d/; 
+		te = String.fromCharCode(tecla); 
+		return patron.test(te); 
+	} 
+</script>
+</head>
+<body>
+<form action="enviar.php" method="post">
+<h2>Ingrese 2 números para ser multiplicados</h2>
+<input type="text" name="Num1" placeholder="Ingrese un número" onkeypress="return ValidarN(event)" required>
+<input type="text" name="Num2" placeholder="Ingrese un número" onkeypress="return ValidarN(event)" required>
+<input type="submit" value="ENVIAR" id="boton">
+</form>
+</body>
+</html>
